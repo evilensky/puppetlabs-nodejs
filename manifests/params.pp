@@ -36,7 +36,8 @@ class nodejs::params {
         }
         default: {
           $gpgcheck = 1
-          $node_pkg = 'nodejs'
+          $node_pkg = ['nodejs', 'c-ares19', 'http-parser', 'libicu', 'libuv', 'v8',]
+
         }
       }
       $npm_pkg  = 'npm'

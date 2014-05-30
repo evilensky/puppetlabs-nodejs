@@ -89,7 +89,7 @@ class nodejs(
   # anchor resource provides a consistent dependency for prereq.
   anchor { 'nodejs::repo': }
 
-  package { 'nodejs':
+  package { $nodejs::params::node_pkg:
     name    => $nodejs::params::node_pkg,
     ensure  => $version,
     require => Anchor['nodejs::repo']
